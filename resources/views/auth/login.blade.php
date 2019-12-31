@@ -49,7 +49,7 @@
 
 				    <div class="input-group mb-3">
                         <div>
-							<img src="{{ Captcha::src('flat') }}">
+							<img class="captcha-image" src="{{ Captcha::src('flat') }}">
                         </div>
                         <input id="captcha" name="captcha" type="text" class="form-control{{ $errors->has('captcha') ? ' is-invalid' : '' }} ml-2" required placeholder="{{ trans('global.captcha') }}">
                         @if($errors->has('captcha'))
@@ -90,4 +90,5 @@
         </div>
     </div>
 </div>
+@include('partials.captcha')
 @endsection
