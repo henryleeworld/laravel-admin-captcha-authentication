@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'Admin Captcha Authentication,
+    'site_title' => 'Admin Captcha Authentication',
 ];
