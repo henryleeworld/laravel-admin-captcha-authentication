@@ -1,8 +1,9 @@
-# Laravel 9 後臺管理驗證碼登入
+# Laravel 10 後臺管理驗證碼登入
 
 在後臺登入頁面中確保只有擁有正確密碼的真人可以存取帳戶，藉此杜絕從遠端以數位方式登入的行為。這項機制的運作原理在於，電腦可以建立扭曲的圖片及處理回應，但無法以真人思維方式閱讀或解決這類問題，因此無法通過人機驗證測驗。
 
 ## 使用方式
+- 打開 php.ini 檔案，啟用 PHP 擴充模組 gd 和 sodium，並重啟服務器。
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
 ```sh
 $ git clone
@@ -20,11 +21,19 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
+```sh
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以登入經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/MLdsEQC.png)
+![](https://i.imgur.com/znrm12N.png)
 > 使用現有的帳號和輸入驗證碼登入
