@@ -11,7 +11,7 @@
         "laravel/passport": "^11.10",
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.9",
-        "laravel/ui": "^4.3",
+        "laravel/ui": "^4.4",
 		"mews/captcha": "^3.3",
         "yajra/laravel-datatables-oracle": "^10.11"
     },
